@@ -15,7 +15,7 @@ namespace IntroductionToClassesExercise
             Console.WriteLine($"Hi {to}, I am {Name}");
         }
 
-        public Person Parse(string str)
+        public static Person Parse(string str)
         {
             var person = new Person();
             person.Name = str;
@@ -26,9 +26,7 @@ namespace IntroductionToClassesExercise
     {
         static void Main()
         {
-            Person person = new Person();
-            var p = person.Parse("John");
-            person.Name = "John";
+            var person = Person.Parse("John");
             person.Introduce("Abe");
         }
     }
